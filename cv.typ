@@ -262,7 +262,7 @@
 
 #let cvcertificates(info, isbreakable: true) = {
     if info.certificates != none {block[
-        == Licenses & Certifications
+        == Certifications
 
         #for cert in info.certificates {
             // parse ISO date strings into datetime objects
@@ -305,7 +305,7 @@
 
 #let cvskills(info, isbreakable: true) = {
     if (info.languages != none) or (info.skills != none) or (info.interests != none) {block(breakable: isbreakable)[
-        == Skills, Languages, Interests
+        == Skills & Languages
         #if (info.languages != none) [
             #let langs = ()
             #for lang in info.languages {
